@@ -92,7 +92,24 @@ public class EstimateService {
             priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
         }
 
-        return priceForDistance + pricePerTruck + priceForOptionalService;
+        //季節係数
+        int schedule = Integer.parseInt(dto.getSchedule());
+        
+        double n;
+        switch(schedule){
+            case 3:
+            case 4:
+                n = 1.5;
+                break;
+            case 9:
+                n = 1.2;
+                break;
+            default:
+                n= 1.0;
+                break;
+        }
+
+        return (int) (Math.floor((priceForDistance + pricePerTruck)*n) + priceForOptionalService);
     }
 
     /**

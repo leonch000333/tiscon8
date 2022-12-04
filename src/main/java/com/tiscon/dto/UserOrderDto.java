@@ -84,8 +84,8 @@ public class UserOrderDto {
         this.newAddress = newAddress;
     }
 
-    public int getSchedule() {
-        return Integer.parseInt(schedule);
+    public String getSchedule() {
+        return schedule;
     }
 
     public void setSchedule(String schedule) {
