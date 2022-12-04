@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS CUSTOMER
     CUSTOMER_NAME                   VARCHAR(60) NOT NULL,
     TEL                             VARCHAR(11) NOT NULL,
     EMAIL                           VARCHAR(256) NOT NULL,
+    SCHEDULE                        VARCHAR(4) NOT NULL,
     OLD_ADDRESS                     VARCHAR(200) NOT NULL,
     NEW_ADDRESS                     VARCHAR(200) NOT NULL,
     PRIMARY KEY (CUSTOMER_ID)

@@ -61,6 +61,15 @@
           <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
         </div>
+        <div class="form-group">
+          <label for="date">引越予定日</label></br>
+          <select id="schedule" name="schedule" class="form-control" th:field="*{schedule}">
+            <option th:value="2022" th:text="2022">2022</option>
+            <option th:value="2023" th:text="2023">2023</option>
+            <option th:value="2024" th:text="2024">2024</option>
+            <option th:value="2025" th:text="2025">2025</option>
+          </select>
+        </div>
       </fieldset>
       <fieldset>
       <div class="sub-title">お荷物情報</div>
@@ -124,6 +133,64 @@
           <!-- <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
                  value="1"/> -->
         </div>
+        <!-- <div class="form-group">
+          <label for="date">引越予定日</label></br>
+          <select id="schedule" name="schedule" class="form-control" th:field="*{schedule}">
+            <option th:value="2022" th:text="2022">2022</option>
+            <option th:value="2023" th:text="2023">2023</option>
+            <option th:value="2024" th:text="2024">2024</option>
+            <option th:value="2025" th:text="2025">2025</option>
+          </select> -->
+          <!-- <select id="month" name="month" class="form-control" th:field="*{month}">
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
+            <option th:value="6" th:text="6">6</option>
+            <option th:value="7" th:text="7">7</option>
+            <option th:value="8" th:text="8">8</option>
+            <option th:value="9" th:text="9">9</option>
+            <option th:value="10" th:text="10">10</option>
+            <option th:value="11" th:text="11">11</option>
+            <option th:value="12" th:text="12">12</option>
+          </select>
+          <select id="date" name="date" class="form-control" th:field="*{date}">
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
+            <option th:value="6" th:text="6">6</option>
+            <option th:value="7" th:text="7">7</option>
+            <option th:value="8" th:text="8">8</option>
+            <option th:value="9" th:text="9">9</option>
+            <option th:value="10" th:text="10">10</option>
+            <option th:value="11" th:text="11">11</option>
+            <option th:value="12" th:text="12">12</option>
+            <option th:value="13" th:text="13">13</option>
+            <option th:value="14" th:text="14">14</option>
+            <option th:value="15" th:text="15">15</option>
+            <option th:value="16" th:text="16">16</option>
+            <option th:value="17" th:text="17">17</option>
+            <option th:value="18" th:text="18">18</option>
+            <option th:value="19" th:text="19">19</option>
+            <option th:value="20" th:text="20">20</option>
+            <option th:value="21" th:text="21">21</option>
+            <option th:value="22" th:text="22">22</option>
+            <option th:value="23" th:text="23">23</option>
+            <option th:value="24" th:text="24">24</option>
+            <option th:value="25" th:text="25">25</option>
+            <option th:value="26" th:text="26">26</option>
+            <option th:value="27" th:text="27">27</option>
+            <option th:value="28" th:text="28">28</option>
+            <option th:value="29" th:text="29">29</option>
+            <option th:value="30" th:text="30">30</option>
+            <option th:value="31" th:text="31">31</option>
+          </select> -->
+        <!-- </div> -->
         <div class="form-group">
           <label for="washingMachineInstallation">洗濯機の設置工事申し込み</label>
           <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">

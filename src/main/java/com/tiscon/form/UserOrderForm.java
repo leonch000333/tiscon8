@@ -38,6 +38,10 @@ public class UserOrderForm {
 
     @Numeric
     @NotBlank
+    private String schedule;
+
+    @Numeric
+    @NotBlank
     private String box;
 
     @Numeric
@@ -109,6 +113,14 @@ public class UserOrderForm {
 
     public void setNewAddress(String newAddress) {
         this.newAddress = newAddress;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
     }
 
     public String getBox() {
