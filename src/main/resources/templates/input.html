@@ -29,14 +29,26 @@
         <div class="form-group">
           <label for="customerName">氏名</label>
           <input type="text" id="customerName" placeholder="(例)山田　太郎" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
+          <span class="text-danger" 
+            th:if="${#fields.hasErrors('customerName')}" 
+            th:errors="*{customerName}"> customerName error 
+          </span>
         </div>
         <div class="form-group">
           <label for="tel">連絡先TEL</label>
           <input type="tel" id="tel" placeholder="(例)0144445555" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
+          <span class="text-danger" 
+            th:if="${#fields.hasErrors('tel')}" 
+            th:errors="*{tel}"> tel error 
+          </span>
         </div>
         <div class="form-group">
           <label for="email">連絡先メールアドレス</label>
           <input type="text" id="email" placeholder="(例)XXXX@example.com" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
+          <span class="text-danger" 
+            th:if="${#fields.hasErrors('email')}" 
+            th:errors="*{email}"> email error 
+          </span>
         </div>
         <div class="sub-title">集荷元・お届け先</div>
         <div class="form-group">
@@ -49,6 +61,10 @@
           <label for="oldAddress">集荷元住所（市区町村以下）</label>
           <input type="text" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
                  class="form-control" value="新宿区西新宿1-1-1"/>
+          <span class="text-danger" 
+            th:if="${#fields.hasErrors('oldAddress')}" 
+            th:errors="*{oldAddress}"> oldAddress error 
+          </span>
         </div>
         <div class="form-group">
           <label for="newPrefectureId">お届け先住所（都道府県）</label>
@@ -60,6 +76,10 @@
           <label for="newAddress">お届け先住所（市区町村以下）</label>
           <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
+          <span class="text-danger" 
+            th:if="${#fields.hasErrors('newAddress')}" 
+            th:errors="*{newAddress}"> newAddress error 
+          </span>
         </div>
         <div class="form-group">
           <label for="date">引越予定日</label></br>
